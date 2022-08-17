@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <title>Card w/ toolbar</title>
+
+    <style type="text/css">
+        .card-custom{
+            flex: 1 1 49%;
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            min-height: 400px;
+        }
+        .card-custom:hover > .toolbar{
+            width: 40px;
+        }
+        .card-custom:hover > .toolbar > *{
+            display: block;
+        }
+
+        .card-custom > .content{
+            flex: 0 1 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .card-custom > .toolbar{
+            flex: 0 0 auto;
+            width: 0;
+            transition: all .6s;
+
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card-custom > .toolbar > *{
+            display: none;
+        }
+
+        .card-custom > .toolbar > .icon{
+            cursor: pointer;
+            font-size: 1.4rem;
+            transition: color .3s;
+            user-select: none;
+        }
+        .card-custom > .toolbar > .icon:hover{
+            color: #FFA500;
+        }
+
+        .card-custom:nth-child(1) > .content{
+            background-image: url("https://images.unsplash.com/photo-1620503374956-c942862f0372?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80");
+        }
+        .card-custom:nth-child(2) > .content{
+            background-image: url("https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80");
+        }
+        .card-custom:nth-child(3) > .content{
+            background-image: url("https://images.unsplash.com/photo-1621109246687-10ae613f2d8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80");
+        }
+        .card-custom:nth-child(4) > .content{
+            background-image: url("https://images.unsplash.com/photo-1489648022186-8f49310909a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80");
+        }
+    </style>
+</head>
+<body class="py-5 container">
+<h3>Card w/ toolbar</h3>
+
+<div class="d-flex flex-column flex-sm-row flex-wrap" style="gap: 2px;">
+    <div class="card-custom">
+        <div class="content"></div>
+        <div class="toolbar">
+            <span class="material-icons-outlined icon">file_download</span>
+            <span class="material-icons-round icon icon-favorite">favorite_border</span>
+            <span class="material-icons-round icon icon-star">star_border</span>
+        </div>
+    </div>
+    <div class="card-custom">
+        <div class="content"></div>
+        <div class="toolbar">
+            <span class="material-icons-outlined icon">file_download</span>
+            <span class="material-icons-round icon icon-favorite">favorite_border</span>
+            <span class="material-icons-round icon icon-star">star_border</span>
+        </div>
+    </div>
+    <div class="card-custom">
+        <div class="content"></div>
+        <div class="toolbar">
+            <span class="material-icons-outlined icon">file_download</span>
+            <span class="material-icons-round icon icon-favorite">favorite_border</span>
+            <span class="material-icons-round icon icon-star">star_border</span>
+        </div>
+    </div>
+    <div class="card-custom">
+        <div class="content"></div>
+        <div class="toolbar">
+            <span class="material-icons-outlined icon">file_download</span>
+            <span class="material-icons-round icon icon-favorite">favorite_border</span>
+            <span class="material-icons-round icon icon-star">star_border</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".icon-favorite").on('mouseover', function () {
+        $(this).text('favorite');
+    }).on('mouseleave', function () {
+        $(this).text('favorite_border');
+    });
+    $(".icon-star").on('mouseover', function () {
+        $(this).text('star');
+    }).on('mouseleave', function () {
+        $(this).text('star_border');
+    });
+</script>
+
+</body>
+</html>
